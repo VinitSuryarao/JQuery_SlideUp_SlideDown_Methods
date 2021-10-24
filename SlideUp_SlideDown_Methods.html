@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+               // slide down param(speed, func)
+               $('#btnslideDown').click(function(){
+                  $('#bdy').slideDown("fast"); 
+               });
+
+               // slide up param(speed, func)
+               $('#btnslideUp').click(function(){
+                  $('#bdy').slideUp("slow", function(){ // Call Back Func
+                     alert("Slide Up Complete");
+                  });               
+               });
+               // slide Toggle param(speed, func)
+               $('#btnslideToggle').click(function(){
+                  $('#bdy').slideToggle("5000"); // we can add miliseconds time              
+               });
+              
+         });
+     </script>
+<head>
+   <body>
+   <div id="bdy" class="bdyclass" style="background-color: palegreen;">
+      <h1> JQuery Information</h1>
+      <p>jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.</p>
+   </div>
+   <button id="btnslideDown"> Slide Down </button> 
+   <button id="btnslideUp"> Slide Up </button> 
+   <button id="btnslideToggle"> Slide Toggle </button> 
+</body>
+</html>
